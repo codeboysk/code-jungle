@@ -1,0 +1,81 @@
+:root {
+    --red: #ff0000;
+    --orange: #ff9100;
+    --yellow: #fff200;
+    --yellow-green: #d7fc03;
+    --green: #00ff00;
+    --body: #607d8b;
+    --gray: #9e9e9e;
+    --white: #ffffff;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: var(--body);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.battery-head {
+    width: 40px;
+    height: 15px;
+    background: var(--white);
+    margin: 0 auto;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.battery-body {
+    width: 100px;
+    height: 200px;
+    background: transparent;
+    position: relative;
+    margin: 0 auto;
+    border: 4px solid var(--white);
+    border-radius: 18px;
+}
+
+i.fa-bolt {
+    color: var(--white);
+    font-size: 40px;
+    position: absolute;
+    left: 38%;
+    top: 40%;
+    z-index: 1;
+    animation: battery-bolt 2s linear infinite;
+}
+
+.charge {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    animation: battery-charge 8s linear infinite;
+    z-index: -1;
+}
+
+/* Battery bolt icon animaiton */
+@keyframes battery-bolt {
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Battery charge animation */
+@keyframes battery-charge {
+    0% { height: 0%; background: var(--red); }
+
+    25% { height: 25%; background: var(--orange); }
+
+    50% { height: 50%; background: var(--yellow); }
+
+    75% { height: 75%; background: var(--yellow-green); }
+
+    100% { height: 100%; background: var(--green); }
+}
