@@ -54,9 +54,10 @@ i.fa-bolt {
     bottom: 0;
     animation: battery-charge 8s linear infinite;
     z-index: -1;
+    border-radius: 0 0 12px 12px;
 }
 
-/* Battery bolt icon animaiton */
+/* Battery bolt icon animation */
 @keyframes battery-bolt {
     50% {
         transform: scale(1.3);
