@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background: #948E99;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2E1437, #948E99);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2E1437, #948E99);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    --g: 8px;
+    /* the gap */
+}
+
+.gallery {
+    display: grid;
+    border-radius: 50%;
+}
+
+.gallery > img {
+    cursor: pointer;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    grid-area: 1/1;
+    aspect-ratio: 1;
+    transform: translate(var(--_x, 0), var(--_y, 0));
+    z-index: 0;
+    transition: .3s, z-index 0s .3s;
+}
+
+.gallery img:hover {
+    --_i: 1;
+    z-index: 1;
+    transition: transform .2s, clip-path .3s .2s, z-index 0s;
+}
+
+.gallery:hover img {
+    transform: translate(0, 0);
+}
+
+.gallery>img:nth-child(1) {
+    clip-path: polygon(50% 50%,
+            calc(50% * var(--_i, 0)) calc(120% * var(--_i, 0)),
+            0 calc(100% * var(--_i, 0)),
+            0 0,
+            100% 0,
+            100% calc(100% * var(--_i, 0)),
+            calc(100% - 50% * var(--_i, 0)) calc(120% * var(--_i, 0)));
+    --_y: calc(-1 * var(--g))
+}
+
+.gallery>img:nth-child(2) {
+    clip-path: polygon(50% 50%, calc(100% - 120% * var(--_i, 0)) calc(50% * var(--_i, 0)), calc(100% - 100% * var(--_i, 0)) 0, 100% 0, 100% 100%, calc(100% - 100% * var(--_i, 0)) 100%, calc(100% - 120% * var(--_i, 0)) calc(100% - 50% * var(--_i, 0)));
+    --_x: var(--g)
+}
+
+.gallery>img:nth-child(3) {
+    clip-path: polygon(50% 50%, calc(100% - 50% * var(--_i, 0)) calc(100% - 120% * var(--_i, 0)), 100% calc(100% - 120% * var(--_i, 0)), 100% 100%, 0 100%, 0 calc(100% - 100% * var(--_i, 0)), calc(50% * var(--_i, 0)) calc(100% - 120% * var(--_i, 0)));
+    --_y: var(--g)
+}
+
+.gallery>img:nth-child(4) {
+    clip-path: polygon(50% 50%, calc(120% * var(--_i, 0)) calc(50% * var(--_i, 0)), calc(100% * var(--_i, 0)) 0, 0 0, 0 100%, calc(100% * var(--_i, 0)) 100%, calc(120% * var(--_i, 0)) calc(100% - 50% * var(--_i, 0)));
+    --_x: calc(-1 * var(--g))
+}
