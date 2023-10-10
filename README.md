@@ -1,6 +1,6 @@
-# css-projects
-You can find the full source codes of all my CSS projects here.
+# CSS Projects
+You can find the full source codes of all my CSS projects here. Follow my youtube and instagram page for more videos related to web development.
 
-Follow me on YouTube: https://www.youtube.com/@a_devs_life
+YouTube: https://www.youtube.com/@a_devs_life
 
-Follow me on Instagram: https://www.instagram.com/a_devs_life/
+Instagram: https://www.instagram.com/a_devs_life/
