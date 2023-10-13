@@ -1,0 +1,271 @@
+/*
+    Author: @a_devs_life
+    Youtube: https://www.youtube.com/@a_devs_life
+    Instagram: https://www.instagram.com/a_devs_life/
+    Github: https://github.com/codeboysk/a-devs-life
+*/
+
+body {
+    background: #1E1C27;
+    margin: 0;
+}
+
+#frame {
+    background: #1F1C2C;
+    background: -webkit-linear-gradient(36deg, #928DAB, #1F1C2C);
+    background: linear-gradient(36deg, #928DAB, #1F1C2C);
+    cursor: pointer;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    overflow: hidden;
+    transition: background 1s ease-in-out;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+}
+
+#frame::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #D1913C; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFD194, #D1913C); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFD194, #D1913C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+}
+
+#frame:hover::before {
+    opacity: 1;
+}
+
+#frame *, #frame *:before, #frame *:after {
+    position: absolute;
+    transition: all 1s ease-in-out;
+}
+
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+}
+
+.cat:hover .center {
+    top: 60%;
+}
+
+.cat .head {
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 160px;
+    background: #fff;
+    border-radius: 50% 50% 50% 50% / 55% 55% 45% 45%
+}
+
+.cat .ear {
+    top: 10px;
+    left: 25px;
+    width: 50px;
+    height: 50px;
+    background: #FFB7BC;
+    border-radius: 5px;
+    box-shadow: 0 0 0 10px #fff;
+    transform: skew(15deg) rotate(20deg);
+}
+
+.cat .ear.b {
+    transform: skew(-15deg) rotate(-20deg);
+    left: 125px;
+}
+
+.cat .body {
+    border-radius: 50% 50% 50% 50% / 80% 80% 20% 20%;
+    background: #e1e1e1;
+    top: 90px;
+    left: 20px;
+    width: 160px;
+    height: 140px;
+}
+
+.cat .eye {
+    top: 70px;
+    left: 40px;
+    width: 30px;
+    height: 30px;
+    background: #aa8c8c;
+    border-radius: 9in;
+    animation: blink 5s infinite ease-in-out;
+}
+
+.cat .eye.b {
+    left: 130px;
+}
+
+.cat .eye:after {
+    width: 20px;
+    height: 20px;
+}
+
+.cat .nose {
+    left: 90px;
+    top: 90px;
+    background: #FDAB9F;
+    width: 20px;
+    height: 10px;
+    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+}
+
+.cat .tail {
+    width: 100px;
+    height: 100px;
+    top: 70px;
+    left: 90px;
+    border: solid 20px #fff;
+    border-color: #efefef transparent transparent #efefef;
+    border-radius: 50%/100px 100px 0 0;
+    rotate: 140deg;
+}
+
+.cat .wing {
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    top: 30px;
+    left: 90px;
+    background: #fff;
+}
+
+.cat:hover .head {
+    top: 5px;
+    left: 50px;
+    width: 100px;
+    height: 75px;
+    background: black;
+    border-radius: 50% 50% 50% 50% / 45% 45% 55% 55%;
+}
+
+.cat:hover .ear {
+    top: 15px;
+    left: 25px;
+    width: 50px;
+    height: 40px;
+    background: #555;
+    border-radius: 5px 30px;
+    box-shadow: 0 0 0 7px black;
+    transform: skew(25deg) rotate(30deg);
+}
+
+.cat:hover .ear.b {
+    border-radius: 30px 5px;
+    transform: skew(-25deg) rotate(-30deg);
+    left: 125px;
+}
+
+.cat:hover .body {
+    border-radius: 50% 50% 50% 50% / 20% 20% 80% 80%;
+    background: #131313;
+    top: 40px;
+    left: 75px;
+    width: 50px;
+    height: 65px;
+}
+
+.cat:hover .eye {
+    top: 30px;
+    left: 60px;
+    width: 35px;
+    height: 35px;
+    background: yellow;
+    border-radius: 9in;
+    animation: blink 5s infinite ease-in-out;
+}
+
+.cat:hover .eye.b {
+    left: 105px;
+}
+
+.dat .eye:after {
+    width: 20px;
+    height: 20px;
+}
+
+.cat:hover .fang {
+    top: 74px;
+    left: 87px;
+    width: 4px;
+    height: 10px;
+    border-radius: 100%;
+    background: white;
+}
+
+.cat:hover .fang.b {
+    left: 107px;
+}
+
+.cat:hover .nose {
+    left: 100px;
+    top: 50px;
+    background: black;
+    width: 0;
+    height: 0;
+    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+}
+
+.cat:hover .tail {
+    border-radius: 50% 50% 50% 50% / 20% 20% 80% 80%;
+    background: #0000;
+    top: 0px;
+    left: 75px;
+    width: 50px;
+    height: 80px;
+    border: solid 0 #0000;
+    rotate: 140deg;
+}
+
+.cat:hover .tailend {
+    background: #0000;
+    top: 40px;
+    left: 75px;
+    width: 50px;
+    height: 80px;
+}
+
+.cat:hover .wing {
+    border-radius: 50% 50% 70% 30% / 10% 20% 80% 90%;
+    width: 50px;
+    height: 20px;
+    top: 75px;
+    left: 40px;
+    background: black;
+    rotate: 15deg;
+}
+
+.cat:hover .wing.b {
+    transform: scaleX(-1);
+    left: 110px;
+    rotate: -15deg;
+}
+
+@keyframes blink {
+    0% {
+        transform: scaleY(100%);
+    }
+    3% {
+        transform: scaleY(0);
+    }
+    6% {
+        transform: scaleY(100%);
+    }
+}
