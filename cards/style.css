@@ -1,0 +1,100 @@
+/*
+    Author: @a_devs_life
+    Youtube: https://www.youtube.com/@a_devs_life
+    Instagram: https://www.instagram.com/a_devs_life/
+    Github: https://github.com/codeboysk/a-devs-life
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    display: grid;
+    place-items: center;
+    background: #000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #000, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.card-group {
+    display: flex;
+    column-gap: 16px;
+    padding: 50px;
+}
+
+.card {
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    background: linear-gradient(to right, #414345, #232526);
+    padding: 32px;
+    box-shadow: -5px 0 50px 32px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    transition: transform 250ms;
+}
+
+.card:not(:first-child) {
+    margin-left: -130px;
+}
+
+.card:hover {
+    transform: translate(-8px, -16px) rotate(3deg);
+}
+
+.card:hover ~ .card {
+    transform: translateX(130px);
+}
+
+.card-date {
+    display: block;
+    color: #777777;
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+
+.card-date strong {
+    color: #d4d4d4;
+}
+
+.card-title {
+    font-size: 26px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.card-footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    color: #fff;
+}
+
+.card-image {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.card-image img {
+    display: block;
+    width: 100%;
+    background: #eee;
+}
