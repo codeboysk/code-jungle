@@ -1,0 +1,134 @@
+/*
+    Author: @a_devs_life
+    Youtube: https://www.youtube.com/@a_devs_life
+    Instagram: https://www.instagram.com/a_devs_life/
+    Github: https://github.com/codeboysk/a-devs-life
+*/
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch {
+    color: #888;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 7em;
+    height: 4em;
+    position: absolute;
+    border-bottom: 0.5em solid #eee;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+}
+
+.switch::before {
+    content: '';
+    background-color: #999;
+    position: absolute;
+    top: 0.5em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 0.5em solid #eee;
+    border-bottom: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.switch-left, .switch-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+    position: absolute;
+}
+
+.switch-left {
+    height: 2.4em;
+    width: 2.75em;
+    bottom: 0.4em;
+    left: 0.85em;
+    transform: rotate(15deg) skewX(15deg);
+    background-color: #ddd;
+}
+
+.switch-right {
+    height: 2.5em;
+    width: 3em;
+    right: 0.5em;
+    bottom: 0;
+    background-color: #e91e63;
+    color: #fff;
+}
+
+.switch-left::before, .switch-right::before {
+    content: '';
+    position: absolute;
+    background-color: #ccc;
+    width: 0.4em;
+    height: 2.45em;
+    bottom: -0.45em;
+    transform: skewY(-65deg);
+}
+
+.switch-left::before {
+    left: -0.4em;
+}
+
+.switch-right::before {
+    right: -0.375em;
+    transform: skewY(65deg);
+    background-color: transparent;
+}
+
+input:checked + .switch-left {
+    background-color: #009688;
+    color: #fff;
+    bottom: 0;
+    left: 0.5em;
+    height: 2.5em;
+    width: 3em;
+    transform: rotate(0) skewX(0);
+}
+
+input:checked + .switch-left::before {
+    background-color: transparent;
+}
+
+input:checked + .switch-left + .switch-right {
+    background-color: #ddd;
+    color: #888;
+    bottom: 0.4em;
+    right: 0.8em;
+    height: 2.4em;
+    width: 2.75em;
+    transform: rotate(-15deg) skewX(-15deg);
+}
+
+input:checked + .switch-left + .switch-right::before {
+    background-color: #ccc;
+}
